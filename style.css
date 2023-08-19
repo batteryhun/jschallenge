@@ -1,0 +1,13 @@
+body {
+  background-color: #008584;
+}
+
+.icon-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-link > img {
+  width: 50px;
+  height: 50px;
+}
