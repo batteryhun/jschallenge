@@ -17,7 +17,7 @@ simulateLoading();
 
 function redirectToNextPage() {
   setTimeout(function () {
-    window.location.href = "../screen/index.html";
+    window.location.href = "index2.html";
   }, 6000);
 }
 
