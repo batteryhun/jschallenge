@@ -1,7 +1,25 @@
 @import "login.css";
+@font-face {
+  font-family: "window95";
+  src: url("../font/MS-Sans-Serif-8pt.woff") format("woff");
+}
+@font-face {
+  font-family: "window95Bold";
+  src: url("../font/MS-Sans-Serif-8pt-bold.woff") format("woff");
+}
 
 body {
   background-color: #008584;
+}
+div,
+span {
+  font-family: "window95";
+}
+
+#background__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .icon-box {
