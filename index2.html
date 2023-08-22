@@ -27,71 +27,101 @@
 
     <p style="font-size: 30px; font-family: 'window95'" id="clock">00:00:00</p>
 
-    <div class="icon-box">
-      <a class="icon-link" href="https://www.google.com/" target="_blank">
-        <img src="img/Google.png" />
-      </a>
-      <a class="icon-link" href="https://www.youtube.com/" target="_blank">
-        <img src="img/YouTube.png" />
-      </a>
-      <a class="icon-link icon-link__weather">
-        <img src="img/Weather.png" />
-      </a>
-      <a class="icon-link icon-link__instagram">
-        <img src="img/Instagram.png" />
-      </a>
-      <a class="icon-link" href="https://discord.com/" target="_blank">
-        <img src="img/Discord.png" />
-      </a>
-      <a
-        class="icon-link"
-        href="https://www.disneyplus.com/ko-kr/home"
-        target="_blank"
-      >
-        <img src="img/Disney+.png" />
-      </a>
-      <a class="icon-link" href="https://www.tiktok.com/ko-KR/" target="_blank">
-        <img src="img/TikTok.png" />
-      </a>
-    </div>
-    <div class="window hidden" id="background__box" style="width: 300px">
-      <div class="title-bar">
-        <div class="title-bar-text">
-          <p>NomadStagram</p>
-        </div>
-        <div class="title-bar-controls">
-          <button aria-label="Minimize"></button>
-          <button aria-label="Maximize"></button>
-          <button aria-label="Close"></button>
-        </div>
+    <div class="flex-box">
+      <!-- 바탕화면 아이콘 -->
+      <div class="icon-box">
+        <a class="icon-link" href="https://www.nomadcoders.co" target="_blank">
+          <img src="img/nomad_logo.svg" />
+        </a>
+        <a class="icon-link" href="https://www.youtube.com/" target="_blank">
+          <img src="img/YouTube.png" />
+        </a>
+        <a class="icon-link icon-link__weather">
+          <img src="img/Weather.png" />
+        </a>
+        <a class="icon-link icon-link__instagram">
+          <img src="img/Instagram.png" />
+        </a>
+        <a class="icon-link" href="https://discord.com/" target="_blank">
+          <img src="img/Discord.png" />
+        </a>
+        <a
+          class="icon-link"
+          href="https://www.disneyplus.com/ko-kr/home"
+          target="_blank"
+        >
+          <img src="img/Disney+.png" />
+        </a>
+        <a
+          class="icon-link"
+          href="https://www.tiktok.com/ko-KR/"
+          target="_blank"
+        >
+          <img src="img/TikTok.png" />
+        </a>
       </div>
-      <div class="window-body">
-        <img id="background__img" src="" alt="" />
-        <button>like</button>
-        <button id="background__refreshBtn">refresh</button>
-      </div>
-    </div>
 
-    <div class="window hidden" id="weather-box" style="width: 300px">
-      <div class="title-bar">
-        <div class="title-bar-text">Now Weather</div>
-        <div class="title-bar-controls">
-          <button aria-label="Minimize"></button>
-          <button aria-label="Maximize"></button>
-          <button aria-label="Close"></button>
+      <!-- 랜덤이미지 인스타그램 -->
+      <div class="window hidden" id="background__box" style="width: 300px">
+        <div class="title-bar">
+          <div class="title-bar-text">
+            <p>NomadStagram</p>
+          </div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body">
+          <img id="background__img" src="" alt="" />
+          <div style="display: flex; justify-content: space-between">
+            <button>like</button>
+            <button id="background__refreshBtn">refresh</button>
+          </div>
         </div>
       </div>
-      <div class="window-body">
-        <div id="weather">
-          <span style="font-size: 15px"></span>
-          <span style="font-size: 15px"></span>
+
+      <!-- 날씨 알림 -->
+      <div class="window hidden" id="weather-box" style="width: 300px">
+        <div class="title-bar">
+          <div class="title-bar-text">Now Weather</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body">
+          <div id="weather">
+            <span style="font-size: 15px"></span>
+            <span style="font-size: 15px"></span>
+          </div>
         </div>
       </div>
+
+      <!-- 투두리스트 -->
+
+      <fieldset style="background-color: #c0c0c0; height: 500px">
+        <legend>Today's check-List</legend>
+        <div id="todo-list" style="display: flex; flex-direction: column">
+          <input checked disabled type="checkbox" id="1" />
+          <label form="1">Doing Nothing</label>
+        </div>
+
+        <div class="field-row">
+          <form id="todo-input">
+            <label for="todo-input">What do you do?</label>
+            <input name="todo-input" type="text" required />
+          </form>
+        </div>
+      </fieldset>
     </div>
 
     <script src="js/index.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/background.js"></script>
     <script src="js/weather.js"></script>
+    <script src="js/todo.js"></script>
   </body>
 </html>

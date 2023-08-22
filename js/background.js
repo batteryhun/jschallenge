@@ -1,4 +1,10 @@
-const bgImages = ["windowbg0.jpeg", "windowbg1.jpeg"];
+const bgImages = [
+  "windowbg0.jpeg",
+  "windowbg1.jpeg",
+  "yahoo.jpeg",
+  "minesweeper.jpeg",
+  "error.jpeg",
+];
 const refreshBtn = document.querySelector("#background__refreshBtn");
 const chosenImage = bgImages[Math.floor(Math.random() * bgImages.length)];
 const bgImage = document.querySelector("#background__img");
